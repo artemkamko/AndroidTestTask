@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TestTask</string>
+    <string name="routeUrl">http://smartbus.gmoby.org/web/index.php/api/trips/</string>
+    <string name="id">id</string>
+    <string name="position">position</string>
+    <string name="refreshing">refreshing</string>
+    <string name="listIsEmpty">listIsEmpty</string>
+</resources>
