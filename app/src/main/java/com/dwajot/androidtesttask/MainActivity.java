@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnIt
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if(getSupportActionBar() != null) {
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle(getString(R.string.title));
         }
     }

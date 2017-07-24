@@ -3,7 +3,6 @@ package com.dwajot.androidtesttask.service;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
-import android.widget.Toast;
 
 import com.dwajot.androidtesttask.R;
 import com.dwajot.androidtesttask.db.DBHelper;
@@ -28,9 +27,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MyService extends Service {
 
     private ExecutorService es;
-
-    public MyService() {
-    }
 
     @Override
     public IBinder onBind(Intent intent) {

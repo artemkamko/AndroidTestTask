@@ -21,13 +21,13 @@ public class Converter {
                 + context.getString(R.string.in) + fromTime;
     }
 
-    public String makeTvToCity (String toDate, String toTime, String toCityName) {
+    public String makeTvToCity(String toDate, String toTime, String toCityName) {
         return context.getString(R.string.infoToCity) + toDate
                 + context.getString(R.string.in) + toCityName
                 + context.getString(R.string.in) + toTime;
     }
 
-    public String makeTvCityId (String cityId, String highlight) {
+    public String makeTvCityId(String cityId, String highlight) {
         return context.getString(R.string.infoCityId) + cityId
                 + context.getString(R.string.infoHighlight) + highlight;
     }
@@ -36,11 +36,11 @@ public class Converter {
         return context.getString(R.string.cityInfo) + info;
     }
 
-    public String makeTvStations (String stations) {
+    public String makeTvStations(String stations) {
         return context.getString(R.string.infoStations) + stations;
     }
 
-    //Main IU methods
+    //Main UI methods
 
     public String makeTvTimeDispatch(String date, String time) {
         return context.getString(R.string.timeDispatch) + date

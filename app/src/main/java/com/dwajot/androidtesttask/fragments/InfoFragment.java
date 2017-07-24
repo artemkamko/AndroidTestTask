@@ -50,7 +50,8 @@ public class InfoFragment extends Fragment {
 
     private DBHelper dbHelper;
     private Realm realm;
-    private int position = -1;
+    private final int DEFAULT_POSITION = -1;
+    private int position = DEFAULT_POSITION;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -71,7 +72,7 @@ public class InfoFragment extends Fragment {
         this.position = position;
         Converter converter = new Converter(getContext());
         Info info = dbHelper.getInfoObject(position);
-        if (info != null && position != -1) {
+        if (info != null && position != DEFAULT_POSITION) {
             tvFrRoutId.setText(info.getId());
             tvFrFromCity.setText(converter.makeTvFromCity(info.getFromDate(), info.getFromTime(), info.getFromCity().getName()));
             tvFrFromCityId.setText(converter.makeTvCityId(info.getFromCity().getId(), info.getFromCity().getHighLight()));
