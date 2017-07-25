@@ -2,6 +2,8 @@ package com.dwajot.androidtesttask;
 
 import android.app.Application;
 
+import com.dwajot.androidtesttask.util.MySharedPreference;
+
 import io.realm.Realm;
 
 /**
@@ -14,5 +16,7 @@ public class MyApp extends Application {
     public void onCreate() {
         super.onCreate();
         Realm.init(this);
+        MySharedPreference mySharedPreference = new MySharedPreference(getApplicationContext());
+        mySharedPreference.setPosition(MySharedPreference.DEFAULT_POSITION);
     }
 }

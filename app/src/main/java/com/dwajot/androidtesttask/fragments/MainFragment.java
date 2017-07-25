@@ -52,8 +52,13 @@ public class MainFragment extends Fragment {
     @BindView(R.id.btnRepeat)
     Button btnRepeat;
 
+
     public interface OnItemSelectedListener {
         void onItemSelected(int position);
+    }
+
+    public MainFragment() {
+
     }
 
     @Override
@@ -61,8 +66,8 @@ public class MainFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.main_fragment, container, false);
         ButterKnife.bind(this, view);
-        setRetainInstance(true);
         EventBus.getDefault().register(this);
+        setRetainInstance(true);
         realm = Realm.getDefaultInstance();
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(mLayoutManager);

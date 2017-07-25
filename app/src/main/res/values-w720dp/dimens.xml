@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <bool name="isTab">true</bool>
+    <bool name="isTab">false</bool>
     <dimen name="textSmall">16sp</dimen>
-    <dimen name="textNormal">17sp</dimen>
+    <dimen name="textNormal">18sp</dimen>
     <dimen name="textLarge">22sp</dimen>
 </resources>

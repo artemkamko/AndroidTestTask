@@ -2,7 +2,6 @@ package com.dwajot.androidtesttask.fragments;
 
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +13,7 @@ import com.dwajot.androidtesttask.R;
 import com.dwajot.androidtesttask.db.DBHelper;
 import com.dwajot.androidtesttask.model.Info;
 import com.dwajot.androidtesttask.util.Converter;
+import com.dwajot.androidtesttask.util.MySharedPreference;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -50,13 +50,16 @@ public class InfoFragment extends Fragment {
 
     private DBHelper dbHelper;
     private Realm realm;
-    private final int DEFAULT_POSITION = -1;
-    private int position = DEFAULT_POSITION;
+
+    public InfoFragment() {
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.info_fragment, container, false);
         ButterKnife.bind(this, view);
+        setRetainInstance(true);
         mainInfoLayout.setVisibility(View.INVISIBLE);
         realm = Realm.getDefaultInstance();
         dbHelper = new DBHelper(realm);
@@ -64,15 +67,13 @@ public class InfoFragment extends Fragment {
         if (bundle != null) {
             updateInfo(bundle.getInt(getString(R.string.position)));
         }
-
         return view;
     }
 
     public void updateInfo(int position) {
-        this.position = position;
         Converter converter = new Converter(getContext());
         Info info = dbHelper.getInfoObject(position);
-        if (info != null && position != DEFAULT_POSITION) {
+        if (info != null && position != MySharedPreference.DEFAULT_POSITION) {
             tvFrRoutId.setText(info.getId());
             tvFrFromCity.setText(converter.makeTvFromCity(info.getFromDate(), info.getFromTime(), info.getFromCity().getName()));
             tvFrFromCityId.setText(converter.makeTvCityId(info.getFromCity().getId(), info.getFromCity().getHighLight()));
@@ -86,20 +87,6 @@ public class InfoFragment extends Fragment {
             tvFrStations.setText(converter.makeTvStations(info.getInfo()));
             mainInfoLayout.setVisibility(View.VISIBLE);
         }
-    }
-
-    @Override
-    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
-        super.onViewStateRestored(savedInstanceState);
-        if (savedInstanceState != null) {
-            updateInfo(savedInstanceState.getInt(getString(R.string.position)));
-        }
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putInt(getString(R.string.position), position);
     }
 
     @Override

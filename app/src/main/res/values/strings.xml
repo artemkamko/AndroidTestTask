@@ -1,9 +1,11 @@
 <resources>
     <!-- Main UI-->
     <string name="title">Расписание маршрутов</string>
-    <string name="timeDispatch">Время отправки -\u0020</string>
-    <string name="timeArrival">Время прибытия -\u0020</string>
-    <string name="slash">\u0020-\u0020</string>
+    <string name="fromCity">Отправка</string>
+    <string name="toCity">Прибытие</string>
+    <string name="time">Время</string>
+    <string name="date">Дата</string>
+    <string name="price">Цена</string>
 
     <!-- Info UI-->
     <string name="genInformation">Общая информация:</string>

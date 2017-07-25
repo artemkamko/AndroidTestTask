@@ -10,8 +10,9 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="@string/emptyList"
-        android:textSize="@dimen/topTextSize"
+        android:textSize="@dimen/textLarge"
         android:textStyle="bold"
+        style="@style/textColorStyle"
         android:visibility="gone"/>
 
     <Button
@@ -21,7 +22,7 @@
         android:layout_centerInParent="true"
         android:layout_below="@id/tvErrorService"
         android:layout_marginTop="10dp"
-        android:textSize="@dimen/textSize"
+        android:textSize="@dimen/textNormal"
         android:text="@string/repeat"
         android:textAllCaps="false"
         android:visibility="gone"/>

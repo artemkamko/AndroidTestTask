@@ -3,87 +3,140 @@
     android:id="@+id/mainFragmentItem"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
-    android:orientation="vertical">
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="4dp"
+    android:gravity="center"
+    android:layout_weight="10"
+    android:orientation="horizontal">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/tvItemIdAndCity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/textSize"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/tvItemFromTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/timeDispatch"
-            android:textSize="@dimen/textSize" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="2dp"
+        android:layout_weight="4"
+        android:gravity="center|top"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tvItemFromCityInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/cityInfo"
-            android:textSize="@dimen/textSize" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal">
+            android:text="@string/fromCity"
+            android:textSize="@dimen/textNormal"
+            android:textStyle="bold"
+            style="@style/textColorStyle"/>
 
         <TextView
-            android:id="@+id/tvItemToTime"
+            android:id="@+id/tvItemFromCity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/timeArrival"
-            android:textSize="@dimen/textSize" />
-
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/textSmall"
+            style="@style/textColorStyle"/>
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="5dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="2dp"
+        android:layout_weight="4"
+        android:gravity="center|top"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tvItemToCityInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/cityInfo"
-            android:textSize="@dimen/textSize" />
+            android:text="@string/toCity"
+            android:textSize="@dimen/textNormal"
+            android:textStyle="bold"
+            style="@style/textColorStyle"/>
+
+        <TextView
+            android:id="@+id/tvItemToCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/textSmall"
+            style="@style/textColorStyle"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center|top"
+        android:layout_marginLeft="2dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            android:gravity="center"
+            android:textSize="@dimen/textNormal"
+            android:textStyle="bold"
+            style="@style/textColorStyle"/>
+
+        <TextView
+            android:id="@+id/tvItemDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSmall"
+            android:gravity="center"
+            style="@style/textColorStyle"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time"
+            android:gravity="center"
+            android:textSize="@dimen/textNormal"
+            android:textStyle="bold"
+            style="@style/textColorStyle"/>
+
+        <TextView
+            android:id="@+id/tvItemTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textSmall"
+            android:gravity="center"
+            style="@style/textColorStyle"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center|top"
+        android:layout_marginRight="2dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:gravity="center"
+            android:textSize="@dimen/textNormal"
+            android:textStyle="bold"
+            style="@style/textColorStyle"/>
+
+        <TextView
+            android:id="@+id/tvItemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/textSmall"
+            android:text="400"
+            style="@style/textColorStyle"/>
     </LinearLayout>
 
 </LinearLayout>

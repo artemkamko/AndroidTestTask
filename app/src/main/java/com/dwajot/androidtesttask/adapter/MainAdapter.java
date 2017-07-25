@@ -48,12 +48,11 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.VHolder> {
 
     @Override
     public void onBindViewHolder(final VHolder holder, int position) {
-        holder.setIdAndCity(position + 1, infoList.get(position).getFromCity().getName(),
-                infoList.get(position).getToCity().getName());
-        holder.setFromTime(infoList.get(position).getFromDate(), infoList.get(position).getFromTime());
-        holder.setFromCityInfo(infoList.get(position).getFromInfo());
-        holder.setToTime(infoList.get(position).getToDate(), infoList.get(position).getToTime());
-        holder.setToCityInfo(infoList.get(position).getToInfo());
+        holder.setTvFromCity(infoList.get(position).getFromCity().getName());
+        holder.setTvToCity(infoList.get(position).getToCity().getName());
+        holder.setTvDate(infoList.get(position).getFromDate());
+        holder.setTvTime(infoList.get(position).getFromTime());
+        holder.setTvPrice(infoList.get(position).getPrice());
         holder.mainFragmentItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,16 +72,16 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.VHolder> {
     }
 
     public static class VHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.tvItemIdAndCity)
-        TextView tvItemIdAndCity;
-        @BindView(R.id.tvItemFromTime)
-        TextView tvItemFromTime;
-        @BindView(R.id.tvItemFromCityInfo)
-        TextView tvItemFromCityInfo;
-        @BindView(R.id.tvItemToTime)
-        TextView tvItemToTime;
-        @BindView(R.id.tvItemToCityInfo)
-        TextView tvItemToCityInfo;
+        @BindView(R.id.tvItemFromCity)
+        TextView tvItemFromCity;
+        @BindView(R.id.tvItemToCity)
+        TextView tvItemToCity;
+        @BindView(R.id.tvItemDate)
+        TextView tvItemDate;
+        @BindView(R.id.tvItemTime)
+        TextView tvItemTime;
+        @BindView(R.id.tvItemPrice)
+        TextView tvItemPrice;
         @BindView(R.id.mainFragmentItem)
         LinearLayout mainFragmentItem;
 
@@ -94,24 +93,25 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.VHolder> {
             converter = new Converter(context);
         }
 
-        public void setIdAndCity(int id, String fromCity, String toCity) {
-            tvItemIdAndCity.setText(converter.makeTvItemIdAndCity(id, fromCity, toCity));
+
+        public void setTvFromCity(String fromCity) {
+            tvItemFromCity.setText(fromCity);
         }
 
-        public void setFromTime(String fromDate, String fromTime) {
-            tvItemFromTime.setText(converter.makeTvTimeDispatch(fromDate, fromTime));
+        public void setTvToCity(String toCity) {
+            tvItemToCity.setText(toCity);
         }
 
-        public void setFromCityInfo(String info) {
-            tvItemFromCityInfo.setText(converter.makeTvCityInfo(info));
+        public void setTvDate(String date) {
+            tvItemDate.setText(converter.makeTvDate(date));
         }
 
-        public void setToTime(String toDate, String toTime) {
-            tvItemToTime.setText(converter.makeTvTimeArrival(toDate, toTime));
+        public void setTvTime(String time) {
+            tvItemTime.setText(converter.makeTvTime(time));
         }
 
-        public void setToCityInfo(String info) {
-            tvItemToCityInfo.setText(converter.makeTvCityInfo(info));
+        public void setTvPrice(String price) {
+            tvItemPrice.setText(price);
         }
     }
 }

@@ -6,4 +6,10 @@
     <string name="position">position</string>
     <string name="refreshing">refreshing</string>
     <string name="listIsEmpty">listIsEmpty</string>
+    <string name="startDateAndTime">yyyy-mm-dd hh:mm:ss</string>
+    <string name="startTime">hh:mm:ss</string>
+    <string name="startDate">yyyy-mm-dd</string>
+    <string name="convertedDateAndTime">dd.mm.yy hh:mm</string>
+    <string name="convertedDate">dd.mm.yy</string>
+    <string name="convertedTime">hh:mm</string>
 </resources>

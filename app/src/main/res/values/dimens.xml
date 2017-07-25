@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="textSize">18sp</dimen>
-    <dimen name="topTextSize">22sp</dimen>
+    <bool name="isTab">false</bool>
+    <dimen name="textSmall">10sp</dimen>
+    <dimen name="textNormal">12sp</dimen>
+    <dimen name="textLarge">14sp</dimen>
 </resources>
