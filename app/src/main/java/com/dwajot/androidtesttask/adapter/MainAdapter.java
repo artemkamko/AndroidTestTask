@@ -48,11 +48,17 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.VHolder> {
 
     @Override
     public void onBindViewHolder(final VHolder holder, int position) {
-        holder.setTvFromCity(infoList.get(position).getFromCity().getName());
-        holder.setTvToCity(infoList.get(position).getToCity().getName());
-        holder.setTvDate(infoList.get(position).getFromDate());
-        holder.setTvTime(infoList.get(position).getFromTime());
-        holder.setTvPrice(infoList.get(position).getPrice());
+        String fromCity = infoList.get(position).getFromCity().getName();
+        String toCity = infoList.get(position).getToCity().getName();
+        String date = infoList.get(position).getFromDate();
+        String time = infoList.get(position).getFromTime();
+        String price = infoList.get(position).getPrice();
+
+        holder.setTvFromCity(fromCity);
+        holder.setTvToCity(toCity);
+        holder.setTvDate(date);
+        holder.setTvTime(time);
+        holder.setTvPrice(price);
         holder.mainFragmentItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,7 +98,6 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.VHolder> {
             ButterKnife.bind(this, itemView);
             converter = new Converter(context);
         }
-
 
         public void setTvFromCity(String fromCity) {
             tvItemFromCity.setText(fromCity);

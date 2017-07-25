@@ -23,7 +23,6 @@ public class MySharedPreference {
 
     public void setPosition(int position) {
         SharedPreferences.Editor edit = preferences.edit();
-        edit.clear();
         edit.putInt(context.getString(R.string.position), position).apply();
     }
 

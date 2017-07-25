@@ -2,6 +2,7 @@ package com.dwajot.androidtesttask;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 
 import com.dwajot.androidtesttask.fragments.InfoFragment;
@@ -14,7 +15,8 @@ public class InfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle(getString(R.string.title));
+            getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+            getSupportActionBar().setCustomView(R.layout.title_bar);
         }
         int position = getIntent().getIntExtra(getString(R.string.position), MySharedPreference.DEFAULT_POSITION);
         InfoFragment infoFragment = (InfoFragment) getSupportFragmentManager().findFragmentById(R.id.infoFragment);

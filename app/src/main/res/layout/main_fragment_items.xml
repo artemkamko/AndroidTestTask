@@ -3,10 +3,10 @@
     android:id="@+id/mainFragmentItem"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="6dp"
     android:layout_marginBottom="4dp"
-    android:gravity="center"
+    android:layout_marginTop="6dp"
     android:layout_weight="10"
+    android:gravity="center"
     android:orientation="horizontal">
 
     <LinearLayout
@@ -18,21 +18,21 @@
         android:orientation="vertical">
 
         <TextView
+            style="@style/textColorStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fromCity"
             android:textSize="@dimen/textNormal"
-            android:textStyle="bold"
-            style="@style/textColorStyle"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvItemFromCity"
+            style="@style/textColorStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center_horizontal"
-            android:textSize="@dimen/textSmall"
-            style="@style/textColorStyle"/>
+            android:textSize="@dimen/textSmall" />
     </LinearLayout>
 
     <LinearLayout
@@ -44,47 +44,47 @@
         android:orientation="vertical">
 
         <TextView
+            style="@style/textColorStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/toCity"
             android:textSize="@dimen/textNormal"
-            android:textStyle="bold"
-            style="@style/textColorStyle"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvItemToCity"
+            style="@style/textColorStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center_horizontal"
-            android:textSize="@dimen/textSmall"
-            style="@style/textColorStyle"/>
+            android:textSize="@dimen/textSmall" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_marginLeft="2dp"
         android:layout_weight="2"
         android:gravity="center|top"
-        android:layout_marginLeft="2dp"
         android:orientation="vertical">
 
         <TextView
+            style="@style/textColorStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/date"
             android:gravity="center"
+            android:text="@string/date"
             android:textSize="@dimen/textNormal"
-            android:textStyle="bold"
-            style="@style/textColorStyle"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvItemDate"
+            style="@style/textColorStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/textSmall"
             android:gravity="center"
-            style="@style/textColorStyle"/>
+            android:textSize="@dimen/textSmall" />
     </LinearLayout>
 
     <LinearLayout
@@ -95,48 +95,47 @@
         android:orientation="vertical">
 
         <TextView
+            style="@style/textColorStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/time"
             android:gravity="center"
+            android:text="@string/time"
             android:textSize="@dimen/textNormal"
-            android:textStyle="bold"
-            style="@style/textColorStyle"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvItemTime"
+            style="@style/textColorStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/textSmall"
             android:gravity="center"
-            style="@style/textColorStyle"/>
+            android:textSize="@dimen/textSmall" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_marginRight="2dp"
         android:layout_weight="2"
         android:gravity="center|top"
-        android:layout_marginRight="2dp"
         android:orientation="vertical">
 
         <TextView
+            style="@style/textColorStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/price"
             android:gravity="center"
+            android:text="@string/price"
             android:textSize="@dimen/textNormal"
-            android:textStyle="bold"
-            style="@style/textColorStyle"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvItemPrice"
+            style="@style/textColorStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="@dimen/textSmall"
-            android:text="400"
-            style="@style/textColorStyle"/>
+            android:textSize="@dimen/textSmall" />
     </LinearLayout>
 
 </LinearLayout>

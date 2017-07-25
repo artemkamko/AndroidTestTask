@@ -78,27 +78,22 @@ public class MainFragment extends Fragment {
             adapter = new MainAdapter(getContext(), dbHelper.getInfoObjects(), mListener);
             recyclerView.setAdapter(adapter);
         } else {
-            backgroundService(true);
+            backgroundService();
         }
         refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                backgroundService(false);
+                backgroundService();
             }
         });
         return view;
     }
 
-    private void backgroundService(boolean showProgress) {
+    private void backgroundService() {
         Intent intent = new Intent(getActivity(), MyService.class);
         getActivity().startService(intent);
-        if (showProgress) {
-            progressDialog = new ProgressDialog(getActivity());
-            progressDialog.setMessage(getString(R.string.loading));
-            progressDialog.setCancelable(false);
-            progressDialog.setIndeterminate(true);
-            progressDialog.show();
-        }
+        refreshLayout.setRefreshing(false);
+        showProgress();
     }
 
     @Subscribe(sticky = true, threadMode = ThreadMode.MAIN)
@@ -120,12 +115,10 @@ public class MainFragment extends Fragment {
         if (progressDialog != null) {
             progressDialog.dismiss();
         }
-        refreshLayout.setRefreshing(false);
     }
 
     @Subscribe(sticky = true, threadMode = ThreadMode.MAIN)
     public void onServiceExceptionEvent(String s) {
-        refreshLayout.setRefreshing(false);
         if (progressDialog != null) {
             progressDialog.dismiss();
         }
@@ -142,7 +135,7 @@ public class MainFragment extends Fragment {
             btnRepeat.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    backgroundService(true);
+                    backgroundService();
                 }
             });
         }
@@ -151,15 +144,27 @@ public class MainFragment extends Fragment {
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putBoolean(getString(R.string.refreshing), refreshLayout.isRefreshing());
+        if (progressDialog != null) {
+            outState.putBoolean(getString(R.string.refreshing), progressDialog.isShowing());
+        }
     }
 
     @Override
     public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
         super.onViewStateRestored(savedInstanceState);
         if (savedInstanceState != null) {
-            refreshLayout.setRefreshing(savedInstanceState.getBoolean(getString(R.string.refreshing)));
+            if (savedInstanceState.getBoolean(getString(R.string.refreshing))) {
+                showProgress();
+            }
         }
+    }
+
+    private void showProgress() {
+        progressDialog = new ProgressDialog(getActivity());
+        progressDialog.setMessage(getString(R.string.loading));
+        progressDialog.setCancelable(false);
+        progressDialog.setIndeterminate(true);
+        progressDialog.show();
     }
 
     @Override

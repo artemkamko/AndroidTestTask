@@ -2,6 +2,7 @@ package com.dwajot.androidtesttask;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 
 import com.dwajot.androidtesttask.fragments.InfoFragment;
@@ -22,7 +23,8 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnIt
             infoFragment.updateInfo(position);
         }
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle(getString(R.string.title));
+            getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+            getSupportActionBar().setCustomView(R.layout.title_bar);
         }
     }
 

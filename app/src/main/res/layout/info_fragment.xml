@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/infoBgColor"
-    android:gravity="center">
+    android:gravity="center"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,13 +19,13 @@
             android:visibility="visible">
 
             <TextView
+                style="@style/textColorStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/genInformation"
                 android:textSize="@dimen/textLarge"
-                android:textStyle="bold"
-                style="@style/textColorStyle"/>
+                android:textStyle="bold" />
 
             <LinearLayout
                 style="@style/infoLayoutStyle"
@@ -32,18 +34,18 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    style="@style/textColorStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/infoRout"
-                    android:textSize="@dimen/textNormal"
-                    style="@style/textColorStyle"/>
+                    android:textSize="@dimen/textNormal" />
 
                 <TextView
                     android:id="@+id/tvFrRoutId"
+                    style="@style/textColorStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/textNormal"
-                    style="@style/textColorStyle"/>
+                    android:textSize="@dimen/textNormal" />
 
             </LinearLayout>
 
@@ -54,11 +56,11 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    style="@style/textColorStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/infoTwo"
-                    android:textSize="@dimen/textNormal"
-                    style="@style/textColorStyle"/>
+                    android:textSize="@dimen/textNormal" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -68,11 +70,11 @@
 
                     <TextView
                         android:id="@+id/tvFrFromCity"
+                        style="@style/textColorStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/infoFromCity"
-                        android:textSize="@dimen/textNormal"
-                        style="@style/textColorStyle"/>
+                        android:textSize="@dimen/textNormal" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -83,11 +85,11 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    style="@style/textColorStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/infoThree"
-                    android:textSize="@dimen/textNormal"
-                    style="@style/textColorStyle"/>
+                    android:textSize="@dimen/textNormal" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -97,11 +99,11 @@
 
                     <TextView
                         android:id="@+id/tvFrFromCityId"
+                        style="@style/textColorStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/infoHighlight"
-                        android:textSize="@dimen/textNormal"
-                        style="@style/textColorStyle"/>
+                        android:textSize="@dimen/textNormal" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -112,11 +114,11 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    style="@style/textColorStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/infoFour"
-                    android:textSize="@dimen/textNormal"
-                    style="@style/textColorStyle"/>
+                    android:textSize="@dimen/textNormal" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -126,11 +128,11 @@
 
                     <TextView
                         android:id="@+id/tvFrFromCityInfo"
+                        style="@style/textColorStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/cityInfo"
-                        android:textSize="@dimen/textNormal"
-                        style="@style/textColorStyle"/>
+                        android:textSize="@dimen/textNormal" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -142,11 +144,11 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    style="@style/textColorStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/infoFive"
-                    android:textSize="@dimen/textNormal"
-                    style="@style/textColorStyle"/>
+                    android:textSize="@dimen/textNormal" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -156,11 +158,11 @@
 
                     <TextView
                         android:id="@+id/tvFrToCity"
+                        style="@style/textColorStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/infoToCity"
-                        android:textSize="@dimen/textNormal"
-                        style="@style/textColorStyle"/>
+                        android:textSize="@dimen/textNormal" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -171,11 +173,11 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    style="@style/textColorStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/infoSix"
-                    android:textSize="@dimen/textNormal"
-                    style="@style/textColorStyle"/>
+                    android:textSize="@dimen/textNormal" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -185,11 +187,11 @@
 
                     <TextView
                         android:id="@+id/tvFrToCityId"
+                        style="@style/textColorStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/infoHighlight"
-                        android:textSize="@dimen/textNormal"
-                        style="@style/textColorStyle"/>
+                        android:textSize="@dimen/textNormal" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -200,11 +202,11 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    style="@style/textColorStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/infoSeven"
-                    android:textSize="@dimen/textNormal"
-                    style="@style/textColorStyle"/>
+                    android:textSize="@dimen/textNormal" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -214,11 +216,11 @@
 
                     <TextView
                         android:id="@+id/tvFrToCityInfo"
+                        style="@style/textColorStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/cityInfo"
-                        android:textSize="@dimen/textNormal"
-                        style="@style/textColorStyle"/>
+                        android:textSize="@dimen/textNormal" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -229,19 +231,19 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    style="@style/textColorStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/infoBusNumber"
-                    android:textSize="@dimen/textNormal"
-                    style="@style/textColorStyle"/>
+                    android:textSize="@dimen/textNormal" />
 
                 <TextView
                     android:id="@+id/tvFrBusNumber"
+                    style="@style/textColorStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
-                    android:textSize="@dimen/textNormal"
-                    style="@style/textColorStyle"/>
+                    android:textSize="@dimen/textNormal" />
             </LinearLayout>
 
             <LinearLayout
@@ -251,18 +253,18 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    style="@style/textColorStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/infoPrice"
-                    android:textSize="@dimen/textNormal"
-                    style="@style/textColorStyle"/>
+                    android:textSize="@dimen/textNormal" />
 
                 <TextView
                     android:id="@+id/tvFrPrice"
+                    style="@style/textColorStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/textNormal"
-                    style="@style/textColorStyle"/>
+                    android:textSize="@dimen/textNormal" />
             </LinearLayout>
 
             <LinearLayout
@@ -272,18 +274,18 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    style="@style/textColorStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/infoReservation"
-                    android:textSize="@dimen/textNormal"
-                    style="@style/textColorStyle"/>
+                    android:textSize="@dimen/textNormal" />
 
                 <TextView
                     android:id="@+id/tvFrReservation"
+                    style="@style/textColorStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/textNormal"
-                    style="@style/textColorStyle"/>
+                    android:textSize="@dimen/textNormal" />
             </LinearLayout>
 
             <LinearLayout
@@ -293,11 +295,11 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    style="@style/textColorStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/infoEleven"
-                    android:textSize="@dimen/textNormal"
-                    style="@style/textColorStyle"/>
+                    android:textSize="@dimen/textNormal" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -307,11 +309,11 @@
 
                     <TextView
                         android:id="@+id/tvFrStations"
+                        style="@style/textColorStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/infoStations"
-                        android:textSize="@dimen/textNormal"
-                        style="@style/textColorStyle"/>
+                        android:textSize="@dimen/textNormal" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
